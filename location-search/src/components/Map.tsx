@@ -20,13 +20,13 @@ export default function Map({ place }: MapProps) {
   return (
     <MapContainer
       ref={mapRef}
-      center={[40.7, -74]}
+      center={[40.7, -74]}  //initial location
       zoom={12}
       scrollWheelZoom
       className="h-full"
     >
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      {place && <Marker position={[place.latitude, place.longitude]} />}
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />  {/* Display the map */}
+      {place && <Marker position={[place.latitude, place.longitude]} />}    {/* Marker used to mark the place */}
     </MapContainer>
   );
 }
